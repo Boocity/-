@@ -60,6 +60,12 @@ public class BmsPostController extends BaseController {
         Map<String, Object> map = iBmsPostService.viewTopic(id);
         return ApiResult.success(map);
     }
+    
+    @GetMapping("/recommend")
+    public ApiResult<List<BmsPost>> getRecommend(@RequestParam("topicId") String id) {
+        List<BmsPost> topics = iBmsPostService.getRecommend(id);
+        return ApiResult.success(topics);
+    }
 
     /*帖子更新、修改*/
     @PostMapping("/update")
