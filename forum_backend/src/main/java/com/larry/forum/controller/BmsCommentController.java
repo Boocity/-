@@ -17,7 +17,7 @@ import static com.larry.forum.jwt.JwtUtil.USER_NAME;
 @RestController
 @RequestMapping("/comment")
 public class BmsCommentController extends BaseController {
-
+    
     @Resource
     private IBmsCommentService bmsCommentService;
     @Resource
