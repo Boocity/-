@@ -123,4 +123,9 @@ public class IBmsPostServiceImpl extends ServiceImpl<BmsTopicMapper, BmsPost> im
 
         return map;
     }
+    
+    @Override
+    public List<BmsPost> getRecommend(String id) {
+        return this.baseMapper.selectRecommend(id);
+    }
 }
